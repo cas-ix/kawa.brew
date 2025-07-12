@@ -1,0 +1,149 @@
+/* Base Reset */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+  text-align: center;
+}
+
+/* Header Styling */
+header {
+  background: #11385b;
+  color: white;
+  padding: 1.5rem 1rem;
+}
+
+.logo {
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin: 0.2em 0;
+  font-size: 1.8rem;
+}
+
+header p {
+  font-size: 1rem;
+  margin: 0.5em 0;
+}
+
+.white-link {
+  color: white;
+  text-decoration: none;
+}
+
+.white-link:hover {
+  text-decoration: underline;
+}
+
+/* Section Headings */
+h2 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Flex Image Grid */
+.image-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 16px;
+  margin-bottom: 2rem;
+}
+
+.menu-image {
+  flex: 1 1 300px;
+  max-width: 45%;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.menu-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styling (merged) */
+footer {
+  background: #11385b;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+footer a img {
+  margin: 12px 0;
+  max-width: 240px;
+  width: 80%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 6px;
+}
+
+footer a img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.voucher {
+  margin-top: 2rem;
+  padding: 0 16px;
+}
+
+.voucher-image {
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.voucher-image:hover {
+  transform: scale(1.03);
+}
+
+.voucher-caption {
+  font-size: 1rem;
+  color: #11385b;
+  margin-top: 0.8rem;
+  font-weight: 500;
+}
+
+
+/* Responsive Mobile Adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .menu-image {
+    max-width: 90%;
+  }
+
+  header,
+  footer {
+    padding: 1rem 0.5rem;
+  }
+
+  .logo {
+    height: 48px;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+}
