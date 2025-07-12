@@ -163,9 +163,9 @@ footer a img:hover {
   }
 
   h2 {
-    font-size: 3rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     font-weight: bolder;
   }
 
@@ -218,4 +218,51 @@ footer a img:hover {
   margin-right: 8px;
   color: #11385b;
   vertical-align: middle;
+}
+
+
+.promo-code {
+  font-size: 1rem;
+  background: #fff3cd;
+  color: #856404;
+  padding: 0.5rem 1rem;
+  margin: 1rem auto 0.5rem;
+  border-radius: 6px;
+  display: inline-block;
+  border: 1px dashed #ffc107;
+}
+
+.promo-code i {
+  margin-right: 6px;
+}
+
+.promo-how {
+  font-size: 0.95rem;
+  margin: 0.5rem auto 1rem;
+  color: #333;
+}
+
+.promo-how i {
+  margin-right: 6px;
+  color: #1da900;
+}
+
+.copy-btn {
+  margin-top: 0.5rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  background-color: #11385b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.copy-btn:hover {
+  background-color: #0d2d49;
+}
+
+.copy-btn i {
+  margin-right: 6px;
 }
