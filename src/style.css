@@ -43,6 +43,17 @@ h2 {
   font-size: 3rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
+  font-weight: bolder;
+  /* Color for headings and shadow*/
+  color: #11385b;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+
+  /* Responsive font size */
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 
 /* Flex Image Grid */
@@ -163,10 +174,13 @@ footer a img:hover {
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5em;
     font-weight: bolder;
+    color: #11385b;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 0 1rem;
   }
 
   .menu-image {
@@ -265,4 +279,30 @@ footer a img:hover {
 
 .copy-btn i {
   margin-right: 6px;
+}
+
+.coupon-btn {
+  display: inline-block;
+  background-color: #1da100;
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.coupon-btn i {
+  margin-right: 6px;
+}
+
+.coupon-btn:hover {
+  background-color: #158c00;
+}
+
+.promo-how i {
+  margin-right: 6px;
+  color: #1da900;
 }
