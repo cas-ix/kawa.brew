@@ -69,32 +69,7 @@ h2 {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer Styling (merged) */
-footer {
-  background: #11385b;
-  color: white;
-  padding: 2rem 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-footer p {
-  margin: 0.5rem 0;
-}
-
-footer a img {
-  margin: 12px 0;
-  max-width: 240px;
-  width: 80%;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border-radius: 6px;
-}
-
-footer a img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
+/* Voucher Promo */
 .voucher {
   margin-top: 2rem;
   padding: 0 16px;
@@ -119,23 +94,86 @@ footer a img:hover {
   font-weight: 500;
 }
 
+/* Modal Popup */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
 
-/* Responsive Mobile Adjustments */
+.modal-content {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 320px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content h3 {
+  color: #11385b;
+  margin-top: 0;
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background: #11385b;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+footer a img {
+  margin: 12px 0;
+  max-width: 150px;
+  width: 80%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 6px;
+}
+
+footer a img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Adjustments */
 @media (max-width: 768px) {
   h1 {
     font-size: 1.5rem;
   }
 
   h2 {
-    font-size: 1.2rem;
+    font-size: 3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bolder;
   }
 
   .menu-image {
     max-width: 90%;
   }
 
-  header,
-  footer {
+  header, footer {
     padding: 1rem 0.5rem;
   }
 
@@ -146,4 +184,38 @@ footer a img:hover {
   header p {
     font-size: 0.9rem;
   }
+}
+
+/* Reusable Modal for Menu/Promo Images */
+.modal-img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+#image-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+#image-modal .close {
+  position: absolute;
+  top: 24px;
+  right: 30px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal-content h3 i {
+  margin-right: 8px;
+  color: #11385b;
+  vertical-align: middle;
 }
