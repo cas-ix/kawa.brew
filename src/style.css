@@ -3,8 +3,10 @@ body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background-color: #fdfdfd;
-  color: #333;
+  color: white;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 /* Header Styling */
@@ -44,19 +46,11 @@ h2 {
   margin-top: 3rem;
   margin-bottom: 3rem;
   font-weight: bolder;
-  /* Color for headings and shadow*/
   color: #11385b;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-
-  /* Responsive font size */
-  @media (max-width: 768px) {
-    font-size: 2.5rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
 }
 
-/* Flex Image Grid */
+/* Flex Image/Video Grid */
 .image-flex {
   display: flex;
   flex-wrap: wrap;
@@ -66,13 +60,19 @@ h2 {
   margin-bottom: 2rem;
 }
 
+/* Shared style for <img> and <video> */
 .menu-image {
   flex: 1 1 300px;
   max-width: 45%;
+  width: 100%;
+  height: auto;
   border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  margin: 1rem;
   object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  cursor: pointer;
 }
 
 .menu-image:hover {
@@ -119,17 +119,25 @@ h2 {
 
 .modal-content {
   background: #fff;
+  color: #333;
   padding: 1.5rem;
   border-radius: 10px;
   max-width: 320px;
   margin: auto;
   text-align: center;
   position: relative;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
 }
 
 .modal-content h3 {
   color: #11385b;
   margin-top: 0;
+}
+
+.modal-content h3 i {
+  margin-right: 8px;
+  color: #11385b;
+  vertical-align: middle;
 }
 
 .close {
@@ -141,100 +149,7 @@ h2 {
   color: #333;
 }
 
-/* Footer */
-footer {
-  background: #11385b;
-  color: white;
-  padding: 2rem 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-footer p {
-  margin: 0.5rem 0;
-}
-
-footer a img {
-  margin: 12px 0;
-  max-width: 150px;
-  width: 80%;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border-radius: 6px;
-}
-
-footer a img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5em;
-    font-weight: bolder;
-    color: #11385b;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    padding: 0 1rem;
-  }
-
-  .menu-image {
-    max-width: 90%;
-  }
-
-  header, footer {
-    padding: 1rem 0.5rem;
-  }
-
-  .logo {
-    height: 48px;
-  }
-
-  header p {
-    font-size: 0.9rem;
-  }
-}
-
-/* Reusable Modal for Menu/Promo Images */
-.modal-img {
-  max-width: 90%;
-  max-height: 80vh;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-}
-
-#image-modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
-}
-
-#image-modal .close {
-  position: absolute;
-  top: 24px;
-  right: 30px;
-  font-size: 2rem;
-  color: #fff;
-  cursor: pointer;
-}
-
-.modal-content h3 i {
-  margin-right: 8px;
-  color: #11385b;
-  vertical-align: middle;
-}
-
-
+/* Promo content */
 .promo-code {
   font-size: 1rem;
   background: #fff3cd;
@@ -302,7 +217,80 @@ footer a img:hover {
   background-color: #158c00;
 }
 
-.promo-how i {
-  margin-right: 6px;
-  color: #1da900;
+/* Footer */
+footer {
+  background: #11385b;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+footer a img {
+  margin: 12px 0;
+  max-width: 150px;
+  width: 80%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 6px;
+}
+
+footer a img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Full-screen background video */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .menu-image {
+    max-width: 90%;
+  }
+
+  header, footer {
+    padding: 1rem 0.5rem;
+  }
+
+  .logo {
+    height: 48px;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
 }
