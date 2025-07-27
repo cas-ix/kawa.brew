@@ -3,7 +3,7 @@
 An interactive, dark-mode-friendly, responsive coffee menu for KAWA Brew, built with HTML, CSS, and JS. Includes animated promotions, radar chart profiles, and LINE referral integration.
 
 🚀 **Live Demo**  
-[![View Site](https://img.shields.io/badge/Open-KAWA%20Menu-4B5563?style=for-the-badge&logo=googlechrome&logoColor=white)](https://casix.github.io/kawa-menu)
+[![View Site](https://img.shields.io/badge/Open-KAWA%20Menu-4B5563?style=for-the-badge&logo=googlechrome&logoColor=white)](https://cas-ix.github.io/kawa-menu)
 
 ---
 
