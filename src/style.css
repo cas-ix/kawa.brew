@@ -135,6 +135,7 @@ h2 {
   backdrop-filter: blur(2px);
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .modal-content {
