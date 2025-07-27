@@ -19,6 +19,19 @@ img, video {
   border-radius: 12px;
 }
 
+/* Taste Notes Radar Section */
+#taste-notes {
+  max-width: 1000px;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+#taste-notes canvas {
+  margin: 1rem auto;
+  max-width: 100%;
+}
+
 /* Header */
 header {
   text-align: center;
@@ -60,7 +73,7 @@ header:hover h1 {
   transform: scale(1.02);
 }
 
-/* Dark toggle button */
+/* Dark toggle */
 .dark-toggle {
   position: absolute;
   top: 0.8rem;
@@ -77,24 +90,103 @@ header:hover h1 {
   color: #fff;
 }
 
-/* Menu section */
+/* Section Headings */
 h2 {
   font-size: 1.3rem;
   margin: 1rem 1rem 0.5rem;
   text-align: center;
 }
 
-.menu-section, .promo-section {
+/* Menu Section */
+.menu-section {
   padding: 0.8rem;
+  text-align: center;
 }
 
 .image-flex {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
   justify-items: center;
 }
 
+.menu-card {
+  text-align: center;
+  max-width: 220px;
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: scale(1.03);
+}
+
+.menu-caption {
+  margin-top: 0.6rem;
+}
+
+.menu-caption h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.menu-caption p {
+  margin: 0.2rem 0 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.menu-image {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.menu-image:hover {
+  transform: scale(1.03);
+}
+
+/* Promo Section */
+/* Promo Section Wrapper */
+.promo-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* Centered Section Header */
+.promo-wrapper h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #222;
+}
+
+/* Flex-based 2-column layout */
+.promo-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Promo Card */
+.promo-card {
+  flex: 1 1 calc(50% - 1.5rem);
+  max-width: 220px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .promo-card {
+    flex: 1 1 100%;
+  }
+}
+
+/* Voucher */
 .voucher {
   text-align: center;
   margin-top: 1rem;
@@ -106,7 +198,7 @@ h2 {
   text-align: center;
 }
 
-/* White link style */
+/* White link */
 .white-link {
   color: #555;
   font-weight: 400;
@@ -124,7 +216,7 @@ h2 {
   color: #111;
 }
 
-/* Modal Styles */
+/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -202,7 +294,6 @@ h2 {
   color: #222;
 }
 
-/* Modal close button */
 .close {
   position: absolute;
   right: 1rem;
@@ -336,7 +427,17 @@ footer a img {
   background-color: #ccc;
 }
 
-/* Add friend */
+.dark-mode .menu-caption h4,
+.dark-mode .promo-caption h4 {
+  color: #eee;
+}
+
+.dark-mode .menu-caption p,
+.dark-mode .promo-caption p {
+  color: #bbb;
+}
+
+/* Friend button */
 .add-friend-container {
   text-align: center;
   margin: 2rem 0;
@@ -363,12 +464,12 @@ footer a img {
   transform: scale(1.05);
 }
 
-/* Section scroll padding */
-#menu, #promo, #contact {
+/* Section scroll offset */
+#menu, #promo, #contact, #taste-notes {
   scroll-margin-top: 150px;
 }
 
-/* Toast animation (for use with JS) */
+/* Toast & Animations */
 .toast {
   position: fixed;
   bottom: 2rem;
@@ -390,7 +491,6 @@ footer a img {
   to { opacity: 1; transform: translateY(0) translateX(-50%); }
 }
 
-/* Modal entrance */
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
