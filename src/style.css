@@ -509,3 +509,27 @@ footer a img {
   h2 { font-size: 1.5rem; }
   .modal-content { max-width: 500px; }
 }
+
+
+.radar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+  padding: 0 1rem;
+}
+
+.radar-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.dark-mode .radar-card {
+  background: #1e1e1e;
+  color: #eee;
+}
